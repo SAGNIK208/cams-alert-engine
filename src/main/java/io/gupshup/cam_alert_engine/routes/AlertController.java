@@ -65,8 +65,6 @@ public class AlertController {
                 }else{
                     return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Business not found");
                 }
-                String alertMessage = createAlertMessage(alertRequest);
-                emailService.sendSimpleMessage(email, "Alert Notification", alertMessage);
             } else {
                 return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Webhook not found");
             }
